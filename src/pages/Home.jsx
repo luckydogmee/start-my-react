@@ -1,7 +1,8 @@
 import { Layout, Menu, Breadcrumb, Icon, Table } from "antd";
 import React, { Component } from "react";
 import "antd/dist/antd.css";
-import { Nav } from '../components/Nav'
+import Nav from '../components/Nav'
+import Title from '../components/Title'
 const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 
@@ -113,6 +114,10 @@ class SiderDemo extends Component {
               <Breadcrumb.Item>Bill</Breadcrumb.Item>
             </Breadcrumb>
             <div style={{ padding: 24, background: "#fff", minHeight: 360 }}>
+              <Title>
+                <div className="title">人员统计</div>
+                <div className="subTitle">近一年</div>
+              </Title>
               <Table columns={this.state.columns} 
                     dataSource={this.state.dataSource}
                     scroll={{ x: "120%", y: 300}}
