@@ -36,8 +36,8 @@ class Nav extends Component{
                         return  (
                             <li className={activeIndex === index?'nav-item active':'nav-item' } 
                                 key={item.key} 
-                                onClick={this.changeNav(index)}
-                                onClose={this.close()}
+                                onClick={()=>this.changeNav(this,index)}     // 传递参数
+                                onClose={this.close}               //  不传递参数
                                 >
                                 { item.name }
                             </li>
@@ -49,4 +49,4 @@ class Nav extends Component{
         )
     }
 }
-export default Nav
+export default Nav;
